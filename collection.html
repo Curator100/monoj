@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections - BanglaShree</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -16,37 +17,163 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="cart-icon">
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
             <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
         </div>
     </nav>
 
     <div class="collection-header">
-        <h1>Our Collections</h1>
+        <h1>Our Royal Collection</h1>
         <div class="filter-section">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Jamdani</button>
-            <button class="filter-btn">Silk</button>
-            <button class="filter-btn">Katan</button>
-            <button class="filter-btn">Muslin</button>
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="jamdani">Jamdani</button>
+            <button class="filter-btn" data-category="silk">Silk</button>
+            <button class="filter-btn" data-category="katan">Katan</button>
+            <button class="filter-btn" data-category="muslin">Muslin</button>
         </div>
     </div>
 
     <section class="products-grid">
-        <!-- Product Cards -->
-        <div class="product-card">
-            <img src="images/saree1.jpg" alt="Jamdani Saree">
+        <!-- Jamdani Category -->
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani1.jpg" alt="Midnight Dream Jamdani">
             <div class="product-info">
-                <h3>Royal Jamdani Saree</h3>
+                <h3>Midnight Dream Jamdani</h3>
+                <p>Luxurious black with gold motifs</p>
                 <p class="price">৳15,000</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart" onclick="addToCart('j1', 'Midnight Dream Jamdani', 15000)">Add to Cart</button>
             </div>
         </div>
-        <!-- Add more product cards similarly -->
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani2.jpg" alt="Royal Gold Jamdani">
+            <div class="product-info">
+                <h3>Royal Gold Jamdani</h3>
+                <p>Black base with intricate gold work</p>
+                <p class="price">৳18,500</p>
+                <button class="add-to-cart" onclick="addToCart('j2', 'Royal Gold Jamdani', 18500)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani3.jpg" alt="Starlit Night Jamdani">
+            <div class="product-info">
+                <h3>Starlit Night Jamdani</h3>
+                <p>Silver motifs on black canvas</p>
+                <p class="price">৳16,800</p>
+                <button class="add-to-cart" onclick="addToCart('j3', 'Starlit Night Jamdani', 16800)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani4.jpg" alt="Imperial Black Jamdani">
+            <div class="product-info">
+                <h3>Imperial Black Jamdani</h3>
+                <p>Classic royal design</p>
+                <p class="price">৳19,200</p>
+                <button class="add-to-cart" onclick="addToCart('j4', 'Imperial Black Jamdani', 19200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani5.jpg" alt="Golden Paisley Jamdani">
+            <div class="product-info">
+                <h3>Golden Paisley Jamdani</h3>
+                <p>Detailed paisley patterns</p>
+                <p class="price">৳17,500</p>
+                <button class="add-to-cart" onclick="addToCart('j5', 'Golden Paisley Jamdani', 17500)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani6.jpg" alt="Regal Night Jamdani">
+            <div class="product-info">
+                <h3>Regal Night Jamdani</h3>
+                <p>Contemporary royal design</p>
+                <p class="price">৳20,000</p>
+                <button class="add-to-cart" onclick="addToCart('j6', 'Regal Night Jamdani', 20000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="jamdani">
+            <img src="images/jamdani7.jpg" alt="Celestial Black Jamdani">
+            <div class="product-info">
+                <h3>Celestial Black Jamdani</h3>
+                <p>Star-inspired patterns</p>
+                <p class="price">৳21,500</p>
+                <button class="add-to-cart" onclick="addToCart('j7', 'Celestial Black Jamdani', 21500)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Silk Category -->
+        <div class="product-card" data-category="silk">
+            <img src="images/silk1.jpg" alt="Mystic Black Silk">
+            <div class="product-info">
+                <h3>Mystic Black Silk</h3>
+                <p>Pure silk with gold border</p>
+                <p class="price">৳22,000</p>
+                <button class="add-to-cart" onclick="addToCart('s1', 'Mystic Black Silk', 22000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Add 6 more silk products following the same pattern -->
+
+        <!-- Katan Category -->
+        <div class="product-card" data-category="katan">
+            <img src="images/katan1.jpg" alt="Royal Black Katan">
+            <div class="product-info">
+                <h3>Royal Black Katan</h3>
+                <p>Premium katan with zari work</p>
+                <p class="price">৳25,000</p>
+                <button class="add-to-cart" onclick="addToCart('k1', 'Royal Black Katan', 25000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Add 6 more katan products following the same pattern -->
+
+        <!-- Muslin Category -->
+        <div class="product-card" data-category="muslin">
+            <img src="images/muslin1.jpg" alt="Heritage Black Muslin">
+            <div class="product-info">
+                <h3>Heritage Black Muslin</h3>
+                <p>Traditional muslin excellence</p>
+                <p class="price">৳28,000</p>
+                <button class="add-to-cart" onclick="addToCart('m1', 'Heritage Black Muslin', 28000)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Add 6 more muslin products following the same pattern -->
     </section>
 
     <footer>
-        <!-- Same footer as index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BanglaShree</h4>
+                <p>Celebrating the art of traditional Bangladeshi sarees</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BanglaShree. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 </html>
